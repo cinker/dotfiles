@@ -1,7 +1,6 @@
 " ----------------------------------------------------------------------
 " | General Settings                                                   |
 
-
 set nocompatible               " Don't make Vim vi-compatibile.
 
 syntax on                      " Enable syntax highlighting.
@@ -157,6 +156,9 @@ function! InitPlugins() abort
     call minpac#add('roxma/vim-hug-neovim-rpc')
     call minpac#add('zchee/deoplete-jedi')
     call minpac#add('Shougo/neco-vim')
+    call minpac#add('shougo/neocomplcache.vim')
+    call minpac#add('shougo/neosnippet')
+    call minpac#add('shougo/neosnippet-snippets')
     call minpac#add('suan/vim-instant-markdown')
     call minpac#add('thiagoalessio/rainbow_levels.vim')
     call minpac#add('tomtom/tcomment_vim')
@@ -248,19 +250,19 @@ let g:deoplete#enable_at_startup = 1
 " Enable `neocomplcache` by default.
 " https://github.com/Shougo/neocomplcache.vim#installation
 
-" let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_at_startup=1
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 " Make `Tab` autocomplete.
 
-" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 " Make `Shift+Tab` insert `Tab` character.
 
-" inoremap <S-TAB> <C-V><TAB>
+inoremap <S-TAB> <C-V><TAB>
 
 " ----------------------------------------------------------------------
 " | Plugins - Signify                                                  |
