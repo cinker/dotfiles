@@ -1,5 +1,10 @@
 " ----------------------------------------------------------------------
 " | General Settings                                                   |
+<<<<<<< HEAD
+
+=======
+" ----------------------------------------------------------------------
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 set nocompatible               " Don't make Vim vi-compatibile.
 
@@ -92,7 +97,6 @@ set synmaxcol=2500             " Limit syntax highlighting (this
                                " when files contain long lines).
 
 set tabstop=4                  " ┐
-set textwidth=79
 set softtabstop=4              " │ Set global <TAB> settings.
 set shiftwidth=4               " │
 set expandtab                  " ┘
@@ -134,12 +138,10 @@ function! InitPlugins() abort
     call minpac#add('ap/vim-css-color')
     call minpac#add('chrisbra/unicode.vim')
     call minpac#add('editorconfig/editorconfig-vim')
-    call minpac#add('fholgado/minibufexpl.vim')
     call minpac#add('godlygeek/tabular')
     call minpac#add('isRuslan/vim-es6')
     call minpac#add('jelera/vim-javascript-syntax')
     call minpac#add('kien/ctrlp.vim')
-    call minpac#add('majutsushi/tagbar')
     call minpac#add('marijnh/tern_for_vim', { 'do': ':silent ! cd $HOME/.vim/pack/minpac/start/tern_for_vim && npm i &> /dev/null' })
     call minpac#add('mattn/emmet-vim')
     call minpac#add('mattn/webapi-vim')
@@ -151,6 +153,7 @@ function! InitPlugins() abort
     call minpac#add('scrooloose/nerdtree')
     call minpac#add('scrooloose/syntastic')
     call minpac#add('sheerun/vim-polyglot')
+<<<<<<< HEAD
     " call minpac#add('shougo/neocomplcache.vim')
     call minpac#add('shougo/neosnippet')
     call minpac#add('shougo/neosnippet-snippets')
@@ -159,9 +162,11 @@ function! InitPlugins() abort
     call minpac#add('roxma/vim-hug-neovim-rpc')
     call minpac#add('zchee/deoplete-jedi')
     call minpac#add('Shougo/neco-vim')
+=======
     call minpac#add('shougo/neocomplcache.vim')
     call minpac#add('shougo/neosnippet')
     call minpac#add('shougo/neosnippet-snippets')
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
     call minpac#add('suan/vim-instant-markdown')
     call minpac#add('thiagoalessio/rainbow_levels.vim')
     call minpac#add('tomtom/tcomment_vim')
@@ -171,7 +176,6 @@ function! InitPlugins() abort
     call minpac#add('tpope/vim-surround')
     call minpac#add('tpope/vim-unimpaired')
     call minpac#add('wellle/targets.vim')
-    call minpac#add('Yggdroot/indentLine')
 
 endfunction
 
@@ -240,11 +244,14 @@ let g:instant_markdown_autostart = 0
 " https://github.com/plasticboy/vim-markdown#disable-folding
 
 let g:vim_markdown_folding_disabled=1
+<<<<<<< HEAD
 " ----------------------------------------------------------------------
 " | Plugins - deoplete                                                 |
 " ----------------------------------------------------------------------
 
 let g:deoplete#enable_at_startup = 1
+=======
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 
 " ----------------------------------------------------------------------
@@ -254,19 +261,31 @@ let g:deoplete#enable_at_startup = 1
 " Enable `neocomplcache` by default.
 " https://github.com/Shougo/neocomplcache.vim#installation
 
+<<<<<<< HEAD
+" let g:neocomplcache_enable_at_startup=1
+=======
 let g:neocomplcache_enable_at_startup=1
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 " Make `Tab` autocomplete.
 
+<<<<<<< HEAD
+" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+=======
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 " Make `Shift+Tab` insert `Tab` character.
 
+<<<<<<< HEAD
+" inoremap <S-TAB> <C-V><TAB>
+=======
 inoremap <S-TAB> <C-V><TAB>
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 " ----------------------------------------------------------------------
 " | Plugins - Signify                                                  |
@@ -286,22 +305,6 @@ let g:signify_disable_by_default=1
 " https://github.com/scrooloose/syntastic#faq
 
 let g:syntastic_javascript_checkers = [ 'eslint' ]
-" Plugin syntastic settings.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
-" Use pylint to check python files.
-let g:syntastic_python_checkers = ['pylint']
-map <F2> :SyntasticToggleMode<CR> :SyntasticCheck<CR>
-" Ignore warnings about newlines trailing.
-let g:syntastic_quiet_messages = { 'regex': ['trailing-newlines', 'invalid-name',
-    \'too-many-lines', 'too-many-instance-attributes', 'too-many-public-methods',
-    \'too-many-locals', 'too-many-branches'] }
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -388,76 +391,6 @@ function! ToggleRelativeLineNumbers()
     endif
 
 endfunction
-
-map <F9> <Esc>:w<CR>:py3file %<CR>
-
-
-" Bind F5 to save file if modified and execute python script in a buffer.
-nnoremap <silent> <F5> :call SaveAndExecutePython()<CR>
-vnoremap <silent> <F5> :<C-u>call SaveAndExecutePython()<CR>
-
-function! SaveAndExecutePython()
-    " SOURCE [reusable window]: https://github.com/fatih/vim-go/blob/master/autoload/go/ui.vim
-
-    " save and reload current file
-    silent execute "update | edit"
-
-    " get file path of current file
-    let s:current_buffer_file_path = expand("%")
-
-    let s:output_buffer_name = "Python"
-    let s:output_buffer_filetype = "output"
-
-    " reuse existing buffer window if it exists otherwise create a new one
-    if !exists("s:buf_nr") || !bufexists(s:buf_nr)
-        silent execute 'botright new ' . s:output_buffer_name
-        let s:buf_nr = bufnr('%')
-    elseif bufwinnr(s:buf_nr) == -1
-        silent execute 'botright new'
-        silent execute s:buf_nr . 'buffer'
-    elseif bufwinnr(s:buf_nr) != bufwinnr('%')
-        silent execute bufwinnr(s:buf_nr) . 'wincmd w'
-    endif
-
-    silent execute "setlocal filetype=" . s:output_buffer_filetype
-    setlocal bufhidden=delete
-    setlocal buftype=nofile
-    setlocal noswapfile
-    setlocal nobuflisted
-    setlocal winfixheight
-    setlocal cursorline " make it easy to distinguish
-    setlocal nonumber
-    setlocal norelativenumber
-    setlocal showbreak=""
-
-    " clear the buffer
-    setlocal noreadonly
-    setlocal modifiable
-    %delete _
-
-    " add the console output
-    silent execute ".!python " . shellescape(s:current_buffer_file_path, 1)
-
-    " resize window to content length
-    " Note: This is annoying because if you print a lot of lines then your code buffer is forced to a height of one line every time you run this function.
-    "       However without this line the buffer starts off as a default size and if you resize the buffer then it keeps that custom size after repeated runs of this function.
-    "       But if you close the output buffer then it returns to using the default size when its recreated
-    "execute 'resize' . line('$')
-
-    " make the buffer non modifiable
-    setlocal readonly
-    setlocal nomodifiable
-endfunction
-
-" Auto add head info
-" .py file into add header
-function HeaderPython()
-    call setline(1, "#!/usr/bin/env python")
-    call append(1, "# -*- coding: utf-8 -*-")
-    normal G
-    normal o
-endf
-autocmd bufnewfile *.py call HeaderPython()
 
 
 " ----------------------------------------------------------------------
@@ -650,9 +583,10 @@ nmap <leader>ss :call StripTrailingWhitespaces()<CR>
 " [,t ] Toggle NERDTree.
 
 map <leader>t :NERDTreeToggle<CR>
+<<<<<<< HEAD
 let g:NERDTreeWinPos='right'
-
-map <leader>tb :TagbarToggle<CR>
+=======
+>>>>>>> e5ddc089f7c47213d69a4d15499c8024ba7b1c0b
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
