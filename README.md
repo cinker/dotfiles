@@ -22,11 +22,12 @@ add this line
   * [⌨️  `tmux` & `vim`](#tmux--vim)
 * [🙇🏻 Acknowledgements](#acknowledgements)
 
-## Setupfff
+## bbSetupfffggg
 
 To set up the `dotfiles` just run the appropriate snippet in the
 terminal:
 
+dsf
 (:warning: **DO NOT** run the `setup` snippet if you do not fully
 understand [what it does][setup]. Seriously, **DON'T**!)
 
