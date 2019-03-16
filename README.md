@@ -19,17 +19,18 @@ add this line
 * [↕️  Update](#update)
 * [📸 Screenshots](#screenshots)
   * [🔁 `git`](#git)
-  * [⌨️  `tmux` & `vim`](#tmux--vim)
+  * [⌨️  `tmux` & `vim`](#sdfsfsdtmux--vim)
 * [🙇🏻 Acknowledgements](#acknowledgements)
 
-## bbSetupfffggg
+## Setupfffdsfdfs
 
 To set up the `dotfiles` just run the appropriate snippet in the
 terminal:
 
-dsf
 (:warning: **DO NOT** run the `setup` snippet if you do not fully
 understand [what it does][setup]. Seriously, **DON'T**!)
+
+cool4
 
 | OS | Snippet |
 |:---|:---|
