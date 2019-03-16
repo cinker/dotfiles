@@ -8,6 +8,7 @@ files described in the [`Local Settings`](#local-settings) section.
 
 ## Table of Contents
 
+add this line
 * [🔧 Setup](#setup)
 * [💄 Customize](#customize)
   * [🔀 Forks](#forks)
@@ -20,9 +21,8 @@ files described in the [`Local Settings`](#local-settings) section.
   * [🔁 `git`](#git)
   * [⌨️  `tmux` & `vim`](#tmux--vim)
 * [🙇🏻 Acknowledgements](#acknowledgements)
-* [📄 License](#license)
 
-## Setup
+## Setupfff
 
 To set up the `dotfiles` just run the appropriate snippet in the
 terminal:
